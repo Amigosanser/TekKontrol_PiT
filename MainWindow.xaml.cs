@@ -11,7 +11,7 @@ namespace ExamEvaluationApp
             InitializeComponent();
         }
 
-        private void CalculateGrade_Click(object sender, RoutedEventArgs e)
+        public void CalculateGrade_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -34,7 +34,7 @@ namespace ExamEvaluationApp
             }
         }
 
-        private int GetValidatedScore(string input, int maxScore, string moduleName)
+        public int GetValidatedScore(string input, int maxScore, string moduleName)
         {
             if (!int.TryParse(input, out int score))
             {
