@@ -1,0 +1,27 @@
+﻿<Window x:Class="ExamEvaluationApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Оценка экзамена" Height="350" Width="500">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Модуль 1: Разработка, администрирование и защита баз данных (макс. 22 балла)"/>
+        <TextBox Grid.Row="1" x:Name="Module1Score" Margin="0,0,0,10"/>
+
+        <TextBlock Grid.Row="2" Text="Модуль 2: Разработка модулей ПО для компьютерных систем (макс. 38 баллов)"/>
+        <TextBox Grid.Row="3" x:Name="Module2Score" Margin="0,0,0,10"/>
+
+        <TextBlock Grid.Row="4" Text="Модуль 3: Сопровождение и обслуживание ПО (макс. 20 баллов)"/>
+        <TextBox Grid.Row="5" x:Name="Module3Score" Margin="0,0,0,10"/>
+
+        <Button Grid.Row="6" Content="Рассчитать оценку" Click="CalculateGrade_Click" Height="30"/>
+    </Grid>
+</Window>
